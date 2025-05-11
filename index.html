@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             background-image: url('https://www.hitwh.edu.cn/_upload/article/images/f2/ef/d8cf0cf64de0a841aed73980c210/34424178-1a37-4807-8f15-0ef577832909_d.jpg'); 
-            background-size: 50% auto;
+            background-size: cover;
             background-position: center;
             background-attachment: fixed;
             color: #2c3e50; 
@@ -299,15 +299,51 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <div class="logo-container">
-                <img src="https://img.picui.cn/free/2025/05/10/681f5a0818009.png" alt="哈尔滨工业大学（威海）四十周年校庆" id="anniversary-logo">
-            </div>
-            <div class="header-text">
-                <h1>我与母校共同成长</h1>
-                <p>选择一个专栏，留下您的宝贵心声</p>
-            </div>
-        </header>
+        <style>
+  header {
+    display: flex;
+    align-items: center;     
+    justify-content: flex-start;
+    padding: 10px 20px;
+  }
+
+  .logo-container {
+    width: 100px;             
+    flex-shrink: 0;          
+    margin-right: 20px;       
+  }
+
+  #anniversary-logo {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .header-text h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  .header-text p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+    color: #666;
+  }
+</style>
+
+<header>
+  <div class="logo-container">
+    <img
+      id="anniversary-logo"
+      src="https://img.picui.cn/free/2025/05/10/681f5a0818009.png"
+      alt="哈尔滨工业大学（威海）四十周年校庆"
+    >
+  </div>
+  <div class="header-text">
+    <h1>我与母校共同成长</h1>
+    <p>选择一个专栏，留下您的宝贵心声</p>
+  </div>
+</header>
+
 <!--
         这个下面的三个链接分别对应问卷星链接
 --> 
