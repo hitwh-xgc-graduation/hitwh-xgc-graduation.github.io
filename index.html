@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我与母校共同成长</title>
+    <meta name="author" content="董运东">
+    <meta name="copyright" content="© 2024 董运东 版权所有">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            margin: 0;
+            padding: 0;
+            background-image: url('https://www.hitwh.edu.cn/_upload/article/images/f2/ef/d8cf0cf64de0a841aed73980c210/34424178-1a37-4807-8f15-0ef577832909_d.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #2c3e50; 
+            line-height: 1.7; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px 10px; 
+            box-sizing: border-box;
+            image-rendering: auto; 
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px; 
+            margin: auto; 
+            padding: 55px; 
+            background-color: rgba(255, 255, 255, 0.55); 
+            backdrop-filter: blur(10px) saturate(160%); 
+            -webkit-backdrop-filter: blur(10px) saturate(160%);
+            box-shadow: 0 16px 45px rgba(0,0,0,0.18), 
+                        0 0 0 1px rgba(255, 255, 255, 0.3) inset, 
+                        0 2px 5px rgba(0,0,0,0.05) inset; 
+            border-radius: 28px; 
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.25); 
+        }
+
+        header {
+            margin-bottom: 45px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 0; 
+            width: 100%;
+            position: relative; 
+            z-index: 1; 
+        }
+
+        #anniversary-logo {
+            width: 400px;
+            height: auto;
+            border-radius: 0;
+            box-shadow: none;
+            transition: transform 0.3s ease;
+            margin-bottom: -10px; 
+        }
+        
+        #anniversary-logo:hover {
+            transform: scale(1.03);
+        }
+
+        .header-text {
+            margin-top: 0; 
+            position: relative;
+            padding-top: 20px;
+            max-width: 90%;
+            z-index: 2; 
+        }
+
+        .header-text:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 1.5px;
+            background: linear-gradient(to right, transparent, #004a7c, transparent);
+            opacity: 0.85;
+            margin-top: -50px; 
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em; 
+            color: #0A1D2C;
+            font-weight: 700; 
+            text-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+        
+        header p {
+            font-size: 1.25em; 
+            color: #1c2b36; 
+            margin-top: 15px;
+            margin-bottom: 0;
+        }
+
+        .channels {
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 35px; 
+            justify-content: center; 
+            align-items: stretch; 
+            margin-top: 45px;
+        }
+
+        .channel-card {
+            flex-grow: 1; 
+            flex-shrink: 1; 
+            flex-basis: 275px; 
+            max-width: 305px; 
+            padding: 35px 28px; 
+            background: #FFFFFF; 
+            
+            border: 1px solid rgba(0, 0, 0, 0.05); 
+            
+            border-radius: 20px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06), 
+                        0 1px 3px rgba(0,0,0,0.04); 
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            text-align: center; 
+            transition: transform 0.3s cubic-bezier(0.215, 0.610, 0.355, 1), 
+                        box-shadow 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+            cursor: pointer;
+            box-sizing: border-box; 
+            position: relative; 
+            overflow: hidden; 
+        }
+        
+        .channel-card > * { 
+            position: relative;
+            z-index: 1;
+        }
+
+        .channel-card:hover {
+            transform: translateY(-10px) scale(1.03); 
+            box-shadow: 0 15px 40px rgba(0, 60, 100, 0.12), 
+                        0 3px 8px rgba(0,0,0,0.06);
+        }
+
+        .channel-card h2 {
+            font-size: 1.4em; 
+            color: #003865; 
+            margin-top: 0; 
+            margin-bottom: 15px;
+            font-weight: 600;
+            line-height: 1.3; 
+        }
+
+        .channel-card p {
+            font-size: 0.95em; 
+            color: #505050; 
+            margin-bottom: 28px; 
+            line-height: 1.7; 
+            flex-grow: 1; 
+        }
+        
+        .channel-card .action-button {
+            display: inline-block;
+            padding: 12px 35px; 
+            background-image: linear-gradient(60deg, #006FE0 0%, #004CA0 100%); 
+            color: white;
+            border-radius: 50px; 
+            text-decoration: none;
+            font-weight: 500; 
+            font-size: 1em; 
+            transition: transform 0.2s cubic-bezier(0.215, 0.610, 0.355, 1), 
+                        box-shadow 0.2s cubic-bezier(0.215, 0.610, 0.355, 1), 
+                        background-image 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 76, 160, 0.28); 
+            margin-top: auto; 
+            will-change: transform; 
+        }
+
+        .channel-card:hover .action-button {
+            transform: scale(1.08) translateY(-1px); 
+            box-shadow: 0 6px 16px rgba(0, 76, 160, 0.38);
+            background-image: linear-gradient(60deg, #004CA0 0%, #006FE0 100%); 
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 85px; 
+            padding-top: 35px;
+            width: 100%;
+            font-size: 0.98em; 
+            color: #000000; 
+        }
+
+        @media (max-width: 992px) { 
+            .container {
+                max-width: 760px; 
+                padding: 45px 30px; 
+            }
+             .channel-card {
+                flex-basis: calc(50% - 17.5px); 
+                max-width: none; 
+            }
+        }
+
+        @media (max-width: 768px) { 
+            body {
+                padding: 15px 0; 
+            }
+            .container {
+                width: 100%; 
+                max-width: none; 
+                margin-left: auto; 
+                margin-right: auto;
+                padding: 30px 20px; 
+                backdrop-filter: blur(8px) saturate(130%); 
+                -webkit-backdrop-filter: blur(8px) saturate(130%);
+                border-radius: 20px; 
+                box-shadow: 0 8px 25px rgba(0,0,0,0.1), 
+                            0 0 0 1px rgba(255, 255, 255, 0.18) inset;
+                box-sizing: border-box; 
+            }
+            header {
+                margin-bottom: 25px;
+            }
+            
+            .logo-container {
+                margin-bottom: 0; 
+            }
+            
+            #anniversary-logo {
+                width: 240px;
+                margin-bottom: -5px; 
+            }
+            
+            .header-text:before {
+                width: 90px;
+                height: 1px;
+                margin-top: -3px; 
+            }
+            
+            header h1 {
+                font-size: 1.7em;
+            }
+            
+            header p {
+                font-size: 0.95em;
+                margin-top: 8px;
+            }
+            
+            .channels {
+                flex-direction: column; 
+                gap: 22px; 
+                margin-top: 25px; 
+                align-items: stretch; 
+            }
+            .channel-card {
+                flex-basis: auto; 
+                width: 100%;     
+                min-width: 0;     
+                max-width: 100%;  
+                padding: 28px 22px; 
+                border-radius: 18px; 
+                border: 1px solid rgba(0,0,0,0.04); 
+                box-shadow: 0 6px 20px rgba(0,0,0,0.04); 
+            }
+            .channel-card h2 {
+                font-size: 1.2em; 
+                margin-bottom: 10px;
+            }
+            .channel-card p {
+                font-size: 0.88em; 
+                margin-bottom: 18px; 
+                line-height: 1.55;
+            }
+            .channel-card .action-button {
+                padding: 11px 28px;
+                font-size: 0.92em; 
+                box-shadow: 0 2px 8px rgba(0, 76, 160, 0.22); 
+            }
+            footer {
+                margin-top: 50px; 
+                padding-top: 20px;
+                font-size: 0.88em; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="https://img.picui.cn/free/2025/05/10/681f5a0818009.png" alt="哈尔滨工业大学（威海）四十周年校庆" id="anniversary-logo">
+            </div>
+            <div class="header-text">
+                <h1>我与母校共同成长</h1>
+                <p>选择一个专栏，留下您的宝贵心声</p>
+            </div>
+        </header>
+<!--
+        这个下面的三个链接分别对应问卷星链接
+--> 
+        <main class="channels">
+            <a href="https://www.wjx.cn/vm/PnmDejM.aspx#" target="_blank" class="channel-card" id="suggestion-card">
+                <h2>我为母校发展建言献策</h2>
+                <p>分享您对母校未来发展的宝贵建议，<br>献上您对哈威学子成长的美好期望。</p>
+                <span class="action-button">前往留言</span>
+            </a>
+
+            <a href="https://www.wjx.cn/vm/ryg8yKB.aspx#" target="_blank" class="channel-card" id="blessing-card">
+                <h2>毕业祝福</h2>
+                <p>留下您的毕业感言与真挚回忆，<br>为母校和同学送上美好祝愿。</p>
+                <span class="action-button">前往祝福</span>
+            </a>
+
+            <a href="https://www.wjx.cn/vm/wFmPPqt.aspx#" target="_blank" class="channel-card" id="letter-card">
+                <h2>给2025新生的一封信</h2>
+                <p>分享您在校园的成长与收获，<br>给即将踏入校门的学弟学妹们以指引。</p>
+                <span class="action-button">写信给新生</span>
+            </a>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 哈尔滨工业大学（威海）</p>
+        <p>学生工作部（处）</p>
+    </footer>
+</body>
+</html>
