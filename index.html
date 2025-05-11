@@ -301,13 +301,22 @@
     <div class="container">
 
 <header>
-  <div class="logo-container">
-    <img
-      id="anniversary-logo"
-      src="https://img.picui.cn/free/2025/05/10/681f5a0818009.png"
-      alt="哈尔滨工业大学（威海）四十周年校庆"
-    >
-  </div>
+  <style>
+  #anniversary-logo {
+    width: 50%;      /* 宽度为父容器的 50% */
+    height: auto;    /* 高度自动，保持原始纵横比 */
+    display: block;  /* 去除 img 默认的 inline-block 间距 */
+    margin: 0 auto;  /* 可选：水平居中 */
+  }
+</style>
+
+<div class="logo-container">
+  <img
+    id="anniversary-logo"
+    src="https://img.picui.cn/free/2025/05/10/681f5a0818009.png"
+    alt="哈尔滨工业大学（威海）四十周年校庆"
+  >
+</div>
   <div class="header-text">
     <h1>我与母校共同成长</h1>
     <p>选择一个专栏，留下您的宝贵心声</p>
